@@ -12,11 +12,13 @@ const List<Color> _colorTema = [ // Arreglo para establecer una serie de colores
   Colors.pink, // Posición 6
 ];
 
-class AppTema { // Nombre de la clase que va a exportar
-  ThemeData theme() { // Método que va a regresar algo de tipo ThemeData, que será lo que reciba el Theme en el Main
+class AppTema{ // Nombre de la clase que va a exportar
+  ThemeData theme(dynamic selected) { // Método que va a regresar algo de tipo ThemeData, que será lo que reciba el Theme en el Main
+
+    
     return ThemeData(
       useMaterial3: true, // Utilizar colores por defecto de Material 3
-      colorSchemeSeed: _colorTema[3], // Si se coloca una posición mayor a 6 se desbordaría el arreglo
+      colorSchemeSeed: _colorTema[selected], // Si se coloca una posición mayor a 6 se desbordaría el arreglo
       // brightness: Brightness.dark // Si se quiere poner el tema en modo oscuro
     );
   }

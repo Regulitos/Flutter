@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:si_no_app/config/tema/app_tema.dart'; // Importamos el tema
+import 'package:si_no_app/config/tema/app_tema.dart'; 
+import 'package:si_no_app/presentacion/pantallas/chat/chat_pantalla.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,18 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Yes No App',
       debugShowCheckedModeBanner: false,
-      theme: AppTema().theme(), // Obtenemos el tema
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Barra de la aplicación'),
-        ),
-        body: Center(
-          child: FilledButton.tonal( // Botón relleno con color
-            onPressed: () {},
-            child: const Text('Clic me'),
-          ), // FilledButton.tonal
-        ), // Center
-      ), // Scaffold
-    ); // MaterialApp
+      theme: AppTema().theme(2), // Obtenemos el tema
+      home: const ChatPantalla(
+
+      )
+    ); 
   }
 }
